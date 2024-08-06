@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <title>Product details - E-commerce-Fashion-Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            screens: {
+              lg: "1100px",
+            },
+
+            colors: {
+              Primary: "#fc6f42",
+              Secondary: "#daaf39",
+              lightYellow: "#FFCF49",
+              purple: "#9864D9",
+              lightPurple: "#cca3ff",
+              green: "#accb46",
+              lightGreen: "#D5F178",
+              pink: "#df7f82",
+              dark: "#292321",
+              textDark: "#4D4E51",
+              whitePink: "#ffe0d3",
+              bg: "#FFF9F2",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      .card button {
+        transition: all 0.8s;
+      }
+      .card:hover button {
+        transform: translateY(-80px);
+      }
+
+      /* .hover-shadow {
+        box-shadow: 4px 4px 0px #292321;
+      } */
+
+      .subscribe {
+        display: grid;
+        grid-template-areas: "stack";
+      }
+
+      .subscribe > * {
+        grid-area: stack;
+      }
+
+      button {
+        transition: all 0.5s;
+      }
+      button:hover {
+        transform: scale(1.05);
+      }
+
+      summary {
+        position: relative;
+      }
+
+      summary {
+        cursor: pointer;
+        list-style-type: none;
+      }
+
+      .summary-text::after {
+        content: "▼";
+        position: absolute;
+        right: 16px;
+      }
+      summary.open .summary-text::after {
+        content: "▲"; /* Change the icon when the details are open */
+      }
+
+      details[open] summary .summary-text::after {
+        content: "▲"; /* Alternative way to change the icon when open */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar start -->
+    <nav class="h-[10vh] flex items-center justify-between px-[5%] bg-Primary">
+      <h1 class="text-xl font-medium">
+        <a href="/index.html"> Logo </a>
+      </h1>
+
+      <ul class="hidden md:flex md:gap-10 lg:gap-20 text-white">
+        <li>Collection</li>
+        <li>
+          <a href="/product-details.html">Shop</a>
+        </li>
+        <li>New Arrival</li>
+        <li>
+          <a href="/about-us.html">About</a>
+        </li>
+      </ul>
+
+      <div class="hidden md:flex gap-4 text-white items-center">
+        <p>Login</p>
+        <button
+          class="bg-Secondary py-2 px-6 text-dark text-lg font-medium rounded-full border-[1px] border-dark border-r-[3px] border-b-[3px]"
+        >
+          Get Started
+        </button>
+      </div>
+
+      <div class="md:hidden">
+        <i class="text-lg text-white ri-menu-3-line nav-icon"></i>
+      </div>
+    </nav>
+    <!-- Navbar end -->
+
+    <!-- Main start -->
+
+    <main class="bg-bg">
+      <div class="px-[5%] m-auto pt-6">
+        <!-- About us hero start -->
+        <div class="my-10 text-center">
+          <h2 class="text-xl md:text-2xl font-medium">
+            We are here to help you go places in style
+          </h2>
+          <p class="text-textDark my-4 md:w-[60%] m-auto">
+            Our goal is to help you look and feel confident as you take on the
+            world, whether it be for a casual weekend getaway or a formal
+            occasion. We strive to make fashion accessible to everyone, no
+            matter your budget. We are dedicated to curating a wide range of
+            high-quality, stylish products that cater to different tastes and
+            preferences.
+          </p>
+          <h4 class="text-textDark mt-6">Jessica Robinson</h4>
+          <h5 class="text-sm text-textDark">Jessica Robinson • CEO</h5>
+        </div>
+        <!-- Product gellary start -->
+        <div class="grid md:grid-cols-4 md:grid-rows-2 gap-6">
+          <img
+            class="col-span-2 row-span-2 object-cover bg-center w-full"
+            src="/images/about-1.jpg"
+            alt=""
+          />
+
+          <img
+            class="col-span-2 object-cover bg-center h-full w-full"
+            src="/images/about-2.jpg"
+            alt=""
+          />
+
+          <img
+            class="object-cover bg-center h-full w-full"
+            src="/images/about-3.jpg"
+            alt=""
+          />
+
+          <img
+            class="object-cover bg-center h-full w-full"
+            src="/images/about-4.jpg"
+            alt=""
+          />
+        </div>
+
+        <!-- History start -->
+
+        <div
+          class="flex justify-between bg-lightYellow p-6 mt-10 md:p-10 rounded-lg"
+        >
+          <div class="space-y-2 md:space-y-4">
+            <h2 class="text-xl md:text-2xl font-medium">25+</h2>
+            <p class="text-sm text-textDark">Years</p>
+          </div>
+          <div class="space-y-2 md:space-y-4">
+            <h2 class="text-xl md:text-2xl font-medium">220+</h2>
+            <p class="text-sm text-textDark">Stores</p>
+          </div>
+          <div class="space-y-2 md:space-y-4">
+            <h2 class="text-xl md:text-2xl font-medium">245K+</h2>
+            <p class="text-sm text-textDark">Customers</p>
+          </div>
+          <div class="space-y-2 md:space-y-4">
+            <h2 class="text-xl md:text-2xl font-medium">25+</h2>
+            <p class="text-sm text-textDark">Awards</p>
+          </div>
+          <div class="space-y-2 md:space-y-4">
+            <h2 class="text-xl md:text-2xl font-medium">99%</h2>
+            <p class="text-sm text-textDark">Satisfied</p>
+          </div>
+        </div>
+
+        <!-- Questions start -->
+
+        <div class="grid md:grid-cols-2 gap-6 mt-10">
+          <div>
+            <h2 class="text-2xl font-medium">Answers to Your Questions</h2>
+            <p class="text-textDark pt-10 pb-12">
+              Got questions? We've got answers. Below are some of the most
+              frequently asked questions about Chic Couture. If you can't find
+              what you're looking for, feel free to contact us. We're here to
+              help!
+            </p>
+            <i
+              class="text-[300px] text-lightYellow leading-none ri-double-quotes-l"
+            ></i>
+          </div>
+          <div class="space-y-4">
+            <details class="p-4 bg-whitePink rounded-lg">
+              <summary class="summary-text text-lg md:text-xl font-medium mb-2">
+                What is your return policy?
+              </summary>
+              <p class="text-textDark">
+                What is your return policy? We offer a 30-day return policy for
+                all unused items with original tags attached. Simply contact our
+                customer service to initiate a return and receive a prepaid
+                shipping label.
+              </p>
+            </details>
+            <details class="p-4 bg-whitePink rounded-lg">
+              <summary class="summary-text text-lg md:text-xl font-medium mb-2">
+                How do I track my order?
+              </summary>
+              <p class="text-textDark">
+                What is your return policy? We offer a 30-day return policy for
+                all unused items with original tags attached. Simply contact our
+                customer service to initiate a return and receive a prepaid
+                shipping label.
+              </p>
+            </details>
+            <details class="p-4 bg-whitePink rounded-lg">
+              <summary class="summary-text text-lg md:text-xl font-medium mb-2">
+                Are your products sustainably made?
+              </summary>
+              <p class="text-textDark">
+                What is your return policy? We offer a 30-day return policy for
+                all unused items with original tags attached. Simply contact our
+                customer service to initiate a return and receive a prepaid
+                shipping label.
+              </p>
+            </details>
+            <details class="p-4 bg-whitePink rounded-lg">
+              <summary class="summary-text text-lg md:text-xl font-medium mb-2">
+                Do you offer international shipping?
+              </summary>
+              <p class="text-textDark">
+                What is your return policy? We offer a 30-day return policy for
+                all unused items with original tags attached. Simply contact our
+                customer service to initiate a return and receive a prepaid
+                shipping label.
+              </p>
+            </details>
+            <details class="p-4 bg-whitePink rounded-lg">
+              <summary class="summary-text text-lg md:text-xl font-medium mb-2">
+                How can I find the right size?
+              </summary>
+              <p class="text-textDark">
+                What is your return policy? We offer a 30-day return policy for
+                all unused items with original tags attached. Simply contact our
+                customer service to initiate a return and receive a prepaid
+                shipping label.
+              </p>
+            </details>
+          </div>
+        </div>
+
+        <!-- Subscribe start -->
+        <div class="subscribe place-items-center mt-20">
+          <img
+            class="h-[400px] md:h-auto object-cover rounded-lg"
+            src="/images/cloth-stand (1) (1).jpg"
+            alt=""
+          />
+          <div
+            class="p-6 bg-white w-[80%] md:w-[450px] rounded-lg space-y-2 md:space-y-6"
+          >
+            <h2 class="text-xl md:text-3xl text-dark font-medium">
+              Sign up to grt a discount
+            </h2>
+            <p class="text-sm w-[80%]">
+              We strivr to make fashion acceable to everyone no matter your
+              budget. We are dedicated to curating a wide range of high-quality
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 md:gap-6">
+              <input
+                class="bg-whitePink p-2 md:p-0 pl-4 md:pl-4 rounded-full w-full md:w-[50%]"
+                type="text"
+                placeholder="Enter your mail"
+              />
+              <button
+                class="bg-Secondary py-2 px-6 text-dark text-lg font-medium rounded-full border-[1px] border-dark border-r-[3px] border-b-[3px]"
+              >
+                Get Started
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Subscribe end -->
+        <!-- pre footer -->
+        <div
+          class="space-y-4 md:space-y-0 md:grid gap-6 md:grid-cols-12 mt-20 mb-10 w-full"
+        >
+          <div class="bg-lightGreen p-8 rounded-lg md:col-span-5 lg:col-span-3">
+            <h3 class="text-2xl">Pages</h3>
+            <ul class="space-y-2 mt-4">
+              <li class="text-lg text-dark">New Arrival</li>
+              <li class="text-lg text-dark">SHop</li>
+              <li class="text-lg text-dark">Seervices</li>
+              <li class="text-lg text-dark">Collection</li>
+              <li class="text-lg text-dark">About us</li>
+              <li class="text-lg text-dark">Contact us</li>
+            </ul>
+          </div>
+          <div
+            class="bg-lightPurple rounded-lg md:col-span-7 lg:col-span-5 p-8 p-auto text-center space-y-4"
+          >
+            <h2>logo</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
+              eos dolor corrupti velit culpa laboriosam, distinctio,
+              exercitationem explicabo iusto suscipit, tenetur recusandae
+              placeat voluptate consectetur.
+            </p>
+
+            <div class="pt-4">
+              <p>ADDRESS: 6688 Princes Road, London</p>
+              <p>London BAS 23JK, UK</p>
+              <p>PHONE:(012) 900 546 789-98</p>
+            </div>
+          </div>
+          <div
+            class="w-full bg-Primary rounded-lg md:col-span-12 lg:col-span-4 text-center p-10 pl-4"
+          >
+            <h2 class="text-2xl font-medium mb-8">Let's get social</h2>
+
+            <div
+              class="grid place-items-center space-y-2 -rotate-12 max-w-min m-auto"
+            >
+              <button
+                class="bg-white py-2 px-6 text-dark text-lg font-medium rounded-full border-[1px] border-dark border-r-[3px] border-b-[3px]"
+              >
+                You tube
+              </button>
+              <div class="flex gap-4">
+                <button
+                  class="bg-lightGreen py-2 px-6 text-dark text-lg font-medium rounded-full border-[1px] border-dark border-r-[3px] border-b-[3px]"
+                >
+                  Instagram
+                </button>
+                <button
+                  class="bg-lightPurple py-2 px-6 text-dark text-lg font-medium rounded-full border-[1px] border-dark border-r-[3px] border-b-[3px]"
+                >
+                  Linkedin
+                </button>
+              </div>
+              <button
+                class="bg-Secondary py-2 px-6 text-dark text-lg font-medium rounded-full border-[1px] border-dark border-r-[3px] border-b-[3px]"
+              >
+                Facebook
+              </button>
+              <button
+                class="bg-[#FFE0D3] py-2 px-6 text-dark text-lg font-medium rounded-full border-[1px] border-dark border-r-[3px] border-b-[3px] justify-self-end"
+              >
+                Twitter
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- pre footer -->
+      </div>
+    </main>
+    <!-- Main end -->
+
+    <!-- footer start -->
+    <footer class="p-4 bg-Primary">
+      <p class="text-center text-white">
+        @chic coutute All Right Recevers 2024.
+      </p>
+    </footer>
+  </body>
+</html>
